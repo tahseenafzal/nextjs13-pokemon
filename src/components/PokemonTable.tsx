@@ -1,0 +1,20 @@
+import { Pokemon } from "@/types";
+
+const PokemonTable = ({ pokemons }: { pokemons: Pokemon[] }) => {
+  return (
+    <table>
+      <thead>
+        <tr>Name</tr>
+      </thead>
+      <tbody>
+        {pokemons.map((pokemon) => (
+          <tr key={pokemon.name}>
+            <td>{pokemon.name}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+};
+
+export default PokemonTable;
